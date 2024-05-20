@@ -1,0 +1,21 @@
+get:
+  tags:
+    - Author
+  summary: Get author by ID
+  description: |
+    Gets author information.
+  operationId: getAuthor
+  parameters:
+    - name: id
+      in: path
+      description: The author's Open Library identifier
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Author.yaml

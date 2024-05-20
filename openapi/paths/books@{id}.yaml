@@ -1,0 +1,21 @@
+get:
+  tags:
+    - Edition / Book
+  summary: Get Edition by ID
+  description: |
+    Gets edition information.
+  operationId: getEdition
+  parameters:
+    - name: id
+      in: path
+      description: The Edition's Open Library identifier
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Edition.yaml

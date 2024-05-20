@@ -1,0 +1,21 @@
+get:
+  tags:
+    - Work
+  summary: Get Work by ID
+  description: |
+    Gets work information.
+  operationId: getWork
+  parameters:
+    - name: id
+      in: path
+      description: The work's Open Library identifier
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Work.yaml
